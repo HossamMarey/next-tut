@@ -1,12 +1,10 @@
-import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
-import styles from "../styles/Home.module.css";
+import React from "react";
 
-export default function Home() {
+const About = () => {
   return (
     <div className="container pt-4">
       <div className="row">
-        <h1>home</h1>
+        <h1>About</h1>
         <hr />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
@@ -19,4 +17,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default About;

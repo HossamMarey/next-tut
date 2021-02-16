@@ -1,12 +1,18 @@
-import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
-import styles from "../styles/Home.module.css";
+import React, { useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-export default function Home() {
+const Error = () => {
+  const router = useRouter();
+  useEffect(() => {
+    setTimeout(() => {
+      router.push("/");
+    }, 3000);
+  }, []);
   return (
     <div className="container pt-4">
       <div className="row">
-        <h1>home</h1>
+        <h1>404 Page Not Found</h1>
         <hr />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
@@ -16,7 +22,12 @@ export default function Home() {
           distinctio expedita aspernatur hic unde quibusdam cum eos itaque
           consectetur et natus nostrum quisquam sint id deleniti fugiat!
         </p>
+        <Link href="/">
+          <a className="btn btn-dark  "> Go Home </a>
+        </Link>
       </div>
     </div>
   );
-}
+};
+
+export default Error;
